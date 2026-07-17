@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Fourth Down ESPN Companion",
+  "version": "1.0.0",
+  "description": "Reads completed ESPN fantasy draft picks and sends them to your Fourth Down room.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://fantasy.espn.com/*"],
+  "optional_host_permissions": ["https://*/*", "http://localhost/*", "http://127.0.0.1/*"],
+  "background": { "service_worker": "background.js" },
+  "options_ui": { "page": "options.html", "open_in_tab": true },
+  "content_scripts": [{ "matches": ["https://fantasy.espn.com/*draft*", "https://fantasy.espn.com/*football*"], "js": ["content.js"], "run_at": "document_idle" }]
+}
