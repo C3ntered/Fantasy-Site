@@ -4,7 +4,7 @@
   "description": "Live, league-aware fantasy football draft copilot",
   "main": "app.js",
   "scripts": {
-    "dev": "netlify dev --config netlify/netlify.toml",
+    "dev": "netlify dev",
     "build": "node scripts/validate-build.js",
     "test": "node scripts/test-ranking.js"
   },
